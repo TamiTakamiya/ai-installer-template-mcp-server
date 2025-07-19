@@ -1,0 +1,43 @@
+[automationgateway]
+{{ automationgateway_host }}
+
+[automationcontroller]
+{{ automationcontroller_host }}
+
+[automationhub]
+{{ automationhub_host }}
+
+[automationeda]
+{{ automationeda_host }}
+
+[database]
+{{ database_host }}
+
+[all:vars]
+ansible_connection=local
+
+postgresql_admin_username=postgres
+postgresql_admin_password={{ postgresql_admin_password }}
+
+registry_username={{ registry_username }}
+registry_password={{ registry_password }}
+
+redis_mode=standalone
+
+gateway_admin_password={{ gateway_admin_password }}
+gateway_pg_host={{ database_host }}
+gateway_pg_password={{ gateway_pg_password }}
+
+controller_admin_password={{ controller_admin_password }}
+controller_pg_host={{ database_host }}
+controller_pg_password={{ controller_pg_password }}
+controller_percent_memory_capacity=0.5
+
+hub_admin_password={{ hub_admin_password }}
+hub_pg_host={{ database_host }}
+hub_pg_password={{ hub_pg_password }}
+hub_seed_collections=false
+
+eda_admin_password={{ eda_admin_password }}
+eda_pg_host={{ database_host }}
+eda_pg_password={{ eda_pg_password }}

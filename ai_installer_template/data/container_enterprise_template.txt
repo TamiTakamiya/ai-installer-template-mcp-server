@@ -1,0 +1,58 @@
+container_enterprise_template[automationgateway]
+{{ automationgateway_host_1 }}
+{{ automationgateway_host_2 }}
+
+[automationcontroller]
+{{ automationcontroller_host_1 }}
+{{ automationcontroller_host_2 }}
+
+[execution_nodes]
+{{ execution_hop_node_host }} receptor_type='hop'
+{{ execution_node_host_1 }}
+{{ execution_node_host_2 }}
+
+[automationhub]
+{{ automationhub_host_1 }}
+{{ automationhub_host_2 }}
+
+[automationeda]
+{{ automationeda_host_1 }}
+{{ automationeda_host_2 }}
+
+[redis]
+{{ automationgateway_host_1 }}
+{{ automationgateway_host_2 }}
+{{ automationhub_host_1 }}
+{{ automationhub_host_2 }}
+{{ automationeda_host_1 }}
+{{ automationeda_host_2 }}
+
+[all:vars]
+postgresql_admin_username={{ postgresql_admin_username }}
+postgresql_admin_password={{ postgresql_admin_password }}
+registry_username={{ registry_username }}
+registry_password={{ registry_password }}
+
+gateway_admin_password={{ gateway_admin_password }}
+gateway_pg_host={{ external_database_host }}
+gateway_pg_database={{ gateway_pg_database }}
+gateway_pg_username={{ gateway_pg_username }}
+gateway_pg_password={{ gateway_pg_password }}
+
+controller_admin_password={{ controller_admin_password }}
+controller_pg_host={{ external_database_host }}
+controller_pg_database={{ controller_pg_database }}
+controller_pg_username={{ controller_pg_username }}
+controller_pg_password={{ controller_pg_password }}
+
+hub_admin_password={{ hub_admin_password }}
+hub_pg_host={{ external_database_host }}
+hub_pg_database={{ hub_pg_database }}
+hub_pg_username={{ hub_pg_username }}
+hub_pg_password={{ hub_pg_password }}
+
+eda_admin_password={{ eda_admin_password }}
+eda_pg_host={{ external_database_host }}
+eda_pg_database={{ eda_pg_database }}
+eda_pg_username={{ eda_pg_username }}
+eda_pg_password={{ eda_pg_password }}
