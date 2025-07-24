@@ -1,4 +1,4 @@
-container_enterprise_template[automationgateway]
+[automationgateway]
 {{ automationgateway_host_1 }}
 {{ automationgateway_host_2 }}
 
